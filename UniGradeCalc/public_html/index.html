@@ -6,92 +6,87 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Style.css">
         <script src="JS.js"></script>
-        <!--<script src="ExcellentExports.js"></script>-->
+        <script src="ExcellentExports.js"></script>
     </head>
     <body onmouseover="gettotal(); totalcredits(); truepercentage(); truetotal(); overalltotal(); grade();">  
-<script>
-function onBackspace(e, callback){
-    var key;
-    if(typeof e.keyIdentifier !== "undefined"){
-        key = e.keyIdentifier;
+        <script>
+                function onBackspace(e, callback){
+                    var key;
+                    if(typeof e.keyIdentifier !== "undefined"){
+                        key = e.keyIdentifier;
 
-    }else if(typeof e.keyCode !== "undefined"){
-        key = e.keyCode;
-    }
-    if (key === 'U+0008' || 
-        key === 'Backspace' || 
-        key === 8) {
-                    if(typeof callback === "function"){
-                callback();
-            }
-            return true;
-        }
-    return false;
-}
+                    }else if(typeof e.keyCode !== "undefined"){
+                        key = e.keyCode;
+                    }
+                    if (key === 'U+0008' || 
+                        key === 'Backspace' || 
+                        key === 8) {
+                                    if(typeof callback === "function"){
+                                callback();
+                            }
+                            return true;
+                        }
+                    return false;
+                }
 
-//event listener
-window.addEventListener('keydown', function (e) {
+                //event listener
+                window.addEventListener('keydown', function (e) {
 
-    switch(e.target.tagName.toLowerCase()){
-        case "input":
-        case "textarea":
-        break;
-        case "body":
-            onBackspace(e,function(){
-                e.preventDefault();
-            });
+                    switch(e.target.tagName.toLowerCase()){
+                        case "input":
+                        case "textarea":
+                        break;
+                        case "body":
+                            onBackspace(e,function(){
+                                e.preventDefault();
+                            });
 
-        break;
-    }
-}, true);
-</script>
+                        break;
+                    }
+                }, true);
+        </script>
+            <table border="1" id="tbl">
+                    <tr>
+                    <th>Module Name</th>
+                        <th>Credits</th>
+                        <th>Percentage1</th>
+                        <th>Grade1</th>
+                        <th>Percentage2</th>
+                        <th>Grade2</th>
+                        <th>Percentage3</th>
+                        <th>Grade3</th>
+                        <th>Total</th>
+                        <th>True Percentage</th>
+                        <th>True Total</th>
+                    </tr>
+                    <tr id="clone">
+                        <td contenteditable="true">SYST</td>
+                        <td contenteditable="true">10</td>
+                        <td contenteditable="true">30</td>
+                        <td contenteditable="true">70</td>
+                        <td contenteditable="true">50</td>
+                        <td contenteditable="true">70</td>
+                        <td contenteditable="true">20</td>
+                        <td contenteditable="true">34</td>
+                        <td contenteditable="false">0</td>
+                        <td contenteditable="false">30</td>
+                        <td contenteditable="false">70</td>
+                    </tr>
+                    <tr>
+                            <th>Total Credits</th>
+                    <td>10</td>
+                            <th>Overall Credits</th>
+                            <td contenteditable="true">120</td>
+                            <th>Overall Total</th>
+                            <td>70</td>
+                            <th>Grade</th>
+                            <td>2.1</td>
+                    </tr>
+            </table>
 
-<table border="1" id="tbl">
-  <tr>
-    <th>Module Name</th>
-    <th>Credits</th>
-    <th>Percentage1</th>
-    <th>Grade1</th>
-    <th>Percentage2</th>
-    <th>Grade2</th>
-    <th>Percentage3</th>
-    <th>Grade3</th>
-    <th>Total</th>
-    <th>True Percentage</th>
-    <th>True Total</th>
-    
-  </tr>
-  <tr id="clone">
-    <td contenteditable="true">SYST</td>
-    <td contenteditable="true">10</td>
-    <td contenteditable="true">30</td>
-    <td contenteditable="true">70</td>
-    <td contenteditable="true">50</td>
-    <td contenteditable="true">70</td>
-    <td contenteditable="true">20</td>
-    <td contenteditable="true">34</td>
-    <td contenteditable="false">0</td>
-    <td contenteditable="false">30</td>
-    <td contenteditable="false">70</td>
-  </tr>
-  
- 
-</table>
-<table id="tcred"><tr>
-      <th>Total Credits</th>
-      <td>10</td>
-      <th>Overall Credits</th>
-      <td contenteditable="true">120</td>
-      <th>Overall Total</th>
-      <td>70</td>
-      <th>Grade</th>
-      <td>2.1</td>
-</tr></table>
-    <input class="AddRow" type="button" value="Add Row" onclick="addRow();" />
-    <input class="RemoveRow" type="button" value="Remove Row" onclick="removeRowFromTable();" />
- 
-<!--<a class="export" download="UniGrade.csv" href="#" onclick="return ExcellentExport.csv(this, 'tbl');">Export to CSV</a>
--->
+        <input class="AddRow" type="button" value="Add Row" onclick="addRow();" />
+        <input class="RemoveRow" type="button" value="Remove Row" onclick="removeRowFromTable();" />
+        <a class="export" download="UniGrade.csv" href="#" onclick="return ExcellentExport.csv(this, 'tbl');">Export to CSV</a>
     </body>
     
     
