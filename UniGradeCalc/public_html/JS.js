@@ -8,7 +8,7 @@ window.setInterval(function(){
     truetotal();
     overalltotal();
     grade();
-}, 2000);
+}, 1000);
 
 window.setInterval(function(){
     validation();
