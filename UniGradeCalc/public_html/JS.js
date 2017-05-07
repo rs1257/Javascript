@@ -18,13 +18,21 @@ function removeRowFromTable(){
     if (rowcount > 2){
         rowcount -=1;
     }
+    else {
+        alert("You cant have less than 1 row");
+    }
 } 
 
-function addRow(){ 
+function addRow(){
+    if (rowcount < 11){
     var x=document.getElementById("tbl").tBodies[0];  //get the table
     var node=x.rows[rowcount-1].cloneNode(true);    //clone the previous node or row
     x.insertBefore(node, x.children[rowcount]);
     rowcount +=1;
+    }
+    else {
+        alert("More than 10 modules are not allowed");
+    }
 }  
 
 //calculations

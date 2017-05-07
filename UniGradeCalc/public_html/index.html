@@ -73,20 +73,20 @@
                         <td contenteditable="false">70</td>
                     </tr>
                     <tr>
-                            <th>Total Credits</th>
-                    <td>10</td>
-                            <th>Overall Credits</th>
-                            <td contenteditable="true">120</td>
-                            <th>Overall Total</th>
-                            <td>70</td>
-                            <th>Grade</th>
-                            <td>2.1</td>
+                        <th>Total Credits</th>
+                        <td>10</td>
+                        <th>Overall Credits</th>
+                        <td contenteditable="true">120</td>
+                        <th>Overall Total</th>
+                        <td>70</td>
+                        <th>Grade</th>
+                        <td>2.1</td>
                     </tr>
             </table>
-
-        <input class="AddRow" type="button" value="Add Row" onclick="addRow();" />
-        <input class="RemoveRow" type="button" value="Remove Row" onclick="removeRowFromTable();" />
-        <a class="export" download="UniGrade.csv" href="#" onclick="return ExcellentExport.csv(this, 'tbl');">Export to CSV</a>
+        
+        <a class="AddRow" href="#" onclick="addRow();">Add Row</a>
+        <a class="RemoveRow" href="#" onclick="removeRowFromTable();">Remove Row</a>
+        <a class="Export" download="UniGrade.csv" href="#" onclick="return ExcellentExport.csv(this, 'tbl');">Export to CSV</a>
     </body>
     
     
